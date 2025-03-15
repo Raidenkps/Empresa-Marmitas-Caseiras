@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabor de Lar - Marmitas Caseiras</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Sabor de Lar" class="logo">
+        <nav>
+            <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
+            <ul class="nav-list">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#planos">Planos</a></li>
+                <li><a href="#pedidos">Pedidos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Sabor de Lar</h1>
+            <p>Marmitas caseiras com gostinho de casa. Monte sua marmita ou escolha um plano mensal!</p>
+            <a href="#pedidos" class="btn pulse">Monte Sua Marmita</a>
+        </div>
+    </section>
+
+    <section id="planos">
+        <h2>Nossos Planos Mensais</h2>
+        <div class="planos-container">
+            <div class="card">
+                <img src="tradicional.jpg" alt="Plano Tradicional">
+                <h3>Tradicional</h3>
+                <p>Segunda: Tropeiro<br>Terça: Frango com Quiabo<br>Quarta: Feijoada<br>Quinta: Frango Assado<br>Sexta: Bife à Rolê</p>
+                <p class="preco">P: R$124,00 | M: R$162,00 | G: R$216,00</p>
+                <button>Assinar Plano</button>
+            </div>
+            <div class="card">
+                <img src="caseirinho.jpg" alt="Plano Caseirinho">
+                <h3>Caseirinho</h3>
+                <p>Segunda: Feijoada<br>Terça: Lasanha<br>Quarta: Macarrão na Chapa<br>Quinta: Almôndega<br>Sexta: Macarronese<br>Sábado: Tutu</p>
+                <p class="preco">P: R$97,00 | M: R$124,00 | G: R$151,00</p>
+                <button>Assinar Plano</button>
+            </div>
+            <div class="card">
+                <img src="dia-a-dia.jpg" alt="Plano Dia-a-Dia">
+                <h3>Dia-a-Dia</h3>
+                <p>Segunda: Carne de Panela<br>Terça: Strogonoff<br>Quarta: Purê de Batata<br>Quinta: Macarrão à Bolonhesa<br>Sexta: Salpicão<br>Sábado: Maionese</p>
+                <p class="preco">P: R$81,00 | M: R$108,00 | G: R$135,00</p>
+                <button>Assinar Plano</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="pedidos">
+        <h2>Monte Sua Marmita</h2>
+        <div class="marmita-options">
+            <label for="tamanho">Tamanho:</label>
+            <select id="tamanho">
+                <option value="P">Pequeno (P)</option>
+                <option value="M">Médio (M)</option>
+                <option value="G">Grande (G)</option>
+            </select>
+
+            <label for="tipo">Tipo de Marmita:</label>
+            <select id="tipo">
+                <option value="tradicional">Tradicional</option>
+                <option value="caseirinho">Caseirinho</option>
+                <option value="dia-a-dia">Dia-a-Dia</option>
+            </select>
+        </div>
+
+        <div class="acompanhamentos">
+            <h3>Acompanhamentos:</h3>
+            <label><input type="checkbox" name="arroz" data-preco="0"> Arroz</label>
+            <label><input type="checkbox" name="feijao" data-preco="0"> Feijão</label>
+            <label><input type="checkbox" name="batata" data-preco="0"> Batata</label>
+            <label><input type="checkbox" name="salada" data-preco="0"> Salada</label>
+            <label><input type="checkbox" name="mandioca" data-preco="0"> Mandioca Frita</label>
+            <label><input type="checkbox" name="ovo" data-preco="0"> Ovo</label>
+        </div>
+
+        <div class="sobremesas">
+            <h3>Sobremesas:</h3>
+            <label><input type="checkbox" name="bolo" data-preco="13.99"> Bolo de Pote - R$13,99</label>
+            <label><input type="checkbox" name="pudim" data-preco="12.99"> Pudim - R$12,99</label>
+            <label><input type="checkbox" name="pave" data-preco="14.99"> Pavê - R$14,99</label>
+            <label><input type="checkbox" name="torta" data-preco="16.99"> Torta - R$16,99</label>
+            <label><input type="checkbox" name="mousse" data-preco="10.00"> Mousse - R$10,00</label>
+            <label><input type="checkbox" name="brigadeiro" data-preco="8.99"> Brigadeiro de Colher - R$8,99</label>
+        </div>
+
+        <button id="adicionar-carrinho">Adicionar ao Carrinho</button>
+    </section>
+
+    <section id="carrinho">
+        <h2>Carrinho de Compras</h2>
+        <div id="resumo-carrinho"></div>
+        <p id="valor-total">Total: R$0,00</p>
+        <button id="finalizar-pedido">Finalizar Pedido</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Sabor de Lar. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
